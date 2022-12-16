@@ -1,14 +1,14 @@
-import MovieCard from "./MovieCard";
+import AppCard from "./AppCard";
 import { useEffect, useState } from "react";
 import tmdb from "../../api/tmdb";
 
 
-const MovieList = () => {
+const TopRatedMovies = () => {
   const [movies, setMovies] = useState([])
 
   useEffect(()=>{
     const fetchMovies = async () => {
-      const {data} = await tmdb.get("tv/top_rated")
+      const {data} = await tmdb.get("movie/top_rated")
       setMovies(data.results)
     }
     fetchMovies();
@@ -16,9 +16,9 @@ const MovieList = () => {
 
   return <div className="flex pb-5 px-5 overflow-x-auto">
     {movies.map((movie,index)=>{
-      return <MovieCard key={index} {...movie} />
+      return <AppCard key={index} {...movie} />
     })}
   </div>
 }
 
-export default MovieList;
+export default TopRatedMovies;

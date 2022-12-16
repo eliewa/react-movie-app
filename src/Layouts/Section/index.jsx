@@ -14,4 +14,4 @@ const Section = ({title, children, ...props}) => {
   </section>
 }
 
-export default Section
+export default Section;

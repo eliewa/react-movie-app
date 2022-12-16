@@ -1,7 +1,6 @@
 import { useState, useRef, useLayoutEffect } from "react";
 
-const Switch = ({ items, onToggle }) => {
-  const [isToggled, setToggle] = useState(false);
+const Switch = ({ items, onToggle, isToggled}) => {
   const [item1Width, setItem1Width] = useState();
   const [item2Width, setItem2Width] = useState();
   const item1Ref = useRef();
@@ -16,15 +15,15 @@ const Switch = ({ items, onToggle }) => {
   const activeTextColor =
     "text-tmdbLightGreen";
 
-  const handleToggle = (toggleState) => {
-    setToggle(toggleState)
+  const handleToggle = (selectedItem) => {
+    onToggle(selectedItem);
   }
 
   return (
     <div className="hover:cursor-pointer h-8 border-solid border-tmdbDarkBlue rounded-[30px] border-[1px] font-semibold flex items-center relative">
       <div
         ref={item1Ref}
-        onClick={handleToggle.bind(null, false)}
+        onClick={handleToggle.bind(null, items[0])}
         className={`py-1 px-5 h-8 rounded-[30px] ${
           isToggled || activeTextColor
         }`}
@@ -33,7 +32,7 @@ const Switch = ({ items, onToggle }) => {
       </div>
       <div
       ref={item2Ref}
-        onClick={()=>{handleToggle(true)}}
+        onClick={()=>{handleToggle(items[1])}}
         className={`py-1 px-2 h-8 rounded-[30px] ${
           isToggled && activeTextColor
         }`}
