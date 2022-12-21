@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/http//eliewa.github.io/react-movie-app/static/css/main.31468c83.css",
+    "main.js": "/http//eliewa.github.io/react-movie-app/static/js/main.bdf4c912.js",
+    "static/media/hero.jpg": "/http//eliewa.github.io/react-movie-app/static/media/hero.c4c32539bd8cc3c916f2.jpg",
+    "index.html": "/http//eliewa.github.io/react-movie-app/index.html",
+    "main.31468c83.css.map": "/http//eliewa.github.io/react-movie-app/static/css/main.31468c83.css.map",
+    "main.bdf4c912.js.map": "/http//eliewa.github.io/react-movie-app/static/js/main.bdf4c912.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31468c83.css",
+    "static/js/main.bdf4c912.js"
+  ]
+}
